@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html[data-theme="light"] {
+  --primary-background-color: #0e0d0b;
+}
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: #0e0d0b !important;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  width: auto;
+  height: 8em;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* AppPage / landing layout */
+.tc-root {
+  box-sizing: border-box;
+}
+
+.meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(240, 236, 226, 0.4);
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c8f23a;
+}
+
+.hero-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #f0ece2;
+  font-weight: 400;
+  margin: 0;
+}
+
+.hero-title-accent {
+  color: #c8f23a;
+}
+
+.cta-primary {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #c8f23a;
+  color: #0e0d0b;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cta-primary:hover {
+  background: #d4f55c;
+}
+
+.fade-up {
+  animation: fadeUp 0.5s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* module card: base + hover background + left accent bar */
+.module-card {
+  position: relative;
+  border-bottom: 1px solid rgba(240, 236, 226, 0.12);
+  transition: background 0.18s ease;
+}
+
+.module-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #c8f23a;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease;
+}
+
+.module-card:hover {
+  background: rgba(200, 242, 58, 0.04);
+}
+
+.module-card:hover::before {
+  transform: scaleY(1);
+}
+
+.module-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.75rem;
+  line-height: 1;
+  color: #c8f23a;
+  opacity: 0.7;
+  letter-spacing: -0.04em;
+  transition: opacity 0.2s ease;
+}
+
+.module-card:hover .module-num {
+  opacity: 1;
+}
+
+.module-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #f0ece2;
+}
+
+.pill {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(200, 242, 58, 0.08);
+  border: 1px solid rgba(200, 242, 58, 0.2);
+  color: #c8f23a;
+  padding: 3px 10px;
+  border-radius: 999px;
+}

@@ -14,6 +14,8 @@ import { Module09Page } from '../Module09Page'
 Router.create({
   history: 'hash',
   routes: [
+    { path: '/piscine-swift', redirect: '/' },
+    { path: '/piscine-swift/', redirect: '/' },
     { path: '/', component: AppPage },
     { path: '/00', component: Module00Page },
     { path: '/01', component: Module01Page },

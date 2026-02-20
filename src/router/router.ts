@@ -12,7 +12,7 @@ import { Module08Page } from '../Module08Page'
 import { Module09Page } from '../Module09Page'
 
 Router.create({
-  history: 'history',
+  history: 'hash',
   routes: [
     { path: '/', component: AppPage },
     { path: '/00', component: Module00Page },

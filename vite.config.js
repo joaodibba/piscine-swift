@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig({
   appType: "spa",
   plugins: [typeComposerPlugin()],
-  base: "./",
+  base: "/piscine-swift/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

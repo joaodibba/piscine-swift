@@ -12,12 +12,12 @@ import { Module08Page } from '../Module08Page'
 import { Module09Page } from '../Module09Page'
 
 Router.create({
-  history: 'hash',
+  history: "hash",
   routes: [
-    { path: '/piscine-swift', redirect: '/' },
-    { path: '/piscine-swift/', redirect: '/' },
-    { path: '/', component: AppPage },
-    { path: '/00', component: Module00Page },
+    { path: "/piscine-swift", redirect: "/" },
+    { path: "/piscine-swift/", redirect: "/" },
+    { path: "/", component: AppPage },
+    { path: "/00", component: Module00Page },
     { path: '/01', component: Module01Page },
     { path: '/02', component: Module02Page },
     { path: '/03', component: Module03Page },

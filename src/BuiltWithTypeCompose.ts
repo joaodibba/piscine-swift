@@ -20,7 +20,7 @@ export class BuiltWithTypeCompose extends DivElement {
     this.onclick = () => window.open("https://typecomposer.com", "_blank");
 
     const logoImage = new ImageElement({
-      src: "/typecomposer.svg",
+      src: `${import.meta.env.BASE_URL}typecomposer.svg`,
       style: {
         width: "14px",
         height: "14px",
